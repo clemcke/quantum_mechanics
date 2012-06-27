@@ -6,6 +6,8 @@ users involved
 Comments
   by user
 
+create new song:
+
 User
   name
   password
@@ -16,3 +18,5 @@ Interface:
   shows attributes, 
   shows comments, 
   allows commenting if logged in
+
+
