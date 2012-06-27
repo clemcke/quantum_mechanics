@@ -16,3 +16,6 @@
 
 # Ignore all ruby mine files
 .idea
+
+# Ignore unencrypted credentials
+config/credentials.rb
