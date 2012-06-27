@@ -6,6 +6,7 @@ gem 'rails', '3.2.2'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'haml'
 
 
 # Gems used only for assets and not required
@@ -34,5 +35,7 @@ gem 'jquery-rails'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-gem 'ruby-debug19', :require => 'ruby-debug'
+group :development do
+  # To use debugger
+  gem 'ruby-debug19', :require => 'ruby-debug'
+end
