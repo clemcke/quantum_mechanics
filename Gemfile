@@ -6,10 +6,9 @@ gem 'rails', '3.2.2'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'haml'
+gem 'net-ssh'
 
-group :integration, :production do 
-  gem 'pg'
-end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -17,7 +16,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer'
+  # gem 'therubyracer'
 
   gem 'uglifier', '>= 1.0.3'
 end
@@ -36,8 +35,12 @@ gem 'jquery-rails'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-group :development,:test do
-  # To use debugger
+# To use debugger
+group :development, :test do
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'sqlite3'
+end
+
+group :production, :integration do
+  gem 'pg'
 end
