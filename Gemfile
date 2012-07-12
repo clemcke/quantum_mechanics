@@ -7,6 +7,7 @@ gem 'rails', '3.2.2'
 
 gem 'haml'
 gem 'net-ssh'
+gem 'bootstrap-sass'
 
 
 # Gems used only for assets and not required

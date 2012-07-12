@@ -2,6 +2,8 @@ QuantumMechanics::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
+  root :to => 'songs#index'
+
   resources :songs
 
   # Sample of regular route:
