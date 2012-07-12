@@ -1,0 +1,10 @@
+.songs
+  %h1 Quantum Mechanics Library
+  %br/
+  - @jams.keys.reverse.each do |key|
+    .jam.well
+      %h3= key.to_s
+      - @jams[key].each do |song|
+        .song
+          =link_to image_tag('play.png', :alt => "Play Song"), song.source_url, :target => "_blank"
+          = song.name.titleize
