@@ -17,5 +17,6 @@
 # Ignore all ruby mine files
 .idea
 
-# Ignore unencrypted credentials
-config/credentials.rb
+# Local config variables, such as S3 credentials
+# This should reflect the same variables stored in heroku config
+.env
