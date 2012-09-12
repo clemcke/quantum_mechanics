@@ -1,11 +1,18 @@
-= form_for(@song) do |f|
-  - if @song.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@song.errors.count, "error")
-        prohibited this song from being saved:
-      %ul
-        - @song.errors.full_messages.each do |msg|
-          %li= msg
-  .actions
-    = f.submit 'Upload', :class => ".btn.btn-primary.btn-large"
+= form_for(@song, {:html => {:multipart => true}}) do |f|
+  .well
+    - if @song.errors.any?
+      #error_explanation
+        %h2
+          = pluralize(@song.errors.count, "error")
+          prohibited this song from being saved:
+        %ul
+          - @song.errors.full_messages.each do |msg|
+            %li= msg
+    =f.label :title
+    =f.text_field :title
+    =f.label :recorded_on
+    =f.date_select :recorded_on
+    =f.label :file
+    =f.file_field :file
+    .actions
+      = f.submit 'Upload', :class => "btn btn-primary btn-large"

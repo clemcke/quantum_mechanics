@@ -12,6 +12,7 @@ Track different takes of the same song
 tag players in the jam
 comments
 imbedded file player (http://www.jplayer.org/)
+autocomplete track name for new tracks
 
 
 DESCRIPTION:
@@ -39,3 +40,5 @@ Interface:
   shows comments, 
   allows commenting if logged in
 
+DESIGN IDEAS:
+grey out navbar after scroll

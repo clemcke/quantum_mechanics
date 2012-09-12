@@ -16,7 +16,12 @@ class SongsController < ApplicationController
   end
 
   def create
-    @song = Song.new(params[:song])
+    debugger
+    song_params = {:title => params[:song][:title],
+                   :file => params[:song][:file],
+                   :recorded_on => Date.new(params[:song]["recorded_on(1i)"].to_i,params[:song]["recorded_on(2i)"].to_i,params[:song]["recorded_on(3i)"].to_i)
+    }
+    @song = Song.new(song_params)
 
     if @song.save
       redirect_to @song, notice: 'Song was successfully created.'

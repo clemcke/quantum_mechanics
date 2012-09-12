@@ -5,7 +5,7 @@ gem 'haml'
 gem 'net-ssh'
 gem 'bootstrap-sass'
 gem 'paperclip'
-gem 'aws-s3'
+gem 'aws-sdk'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
